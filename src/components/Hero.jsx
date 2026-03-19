@@ -25,7 +25,7 @@ const Hero = () => {
             }}
             className="absolute text-white font-black text-4xl md:text-6xl select-none"
             style={{ 
-              left: `${15 + i * 15}%`, 
+              left: `${1 + i * 15}%`, 
               top: `${20 + i * 10}%` 
             }}
           >
@@ -44,6 +44,22 @@ const Hero = () => {
         transition={{ duration: 1 }}
         className="flex flex-col items-center z-10"
       >
+        {/* ADDED: Freelance Availability Badge */}
+        <motion.div 
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="mb-0 flex items-center gap-2 px-4 py-2 bg-[#915eff]/10 border border-[#915eff]/30 rounded-full backdrop-blur-md"
+        >
+          <span className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          </span>
+          <p className="text-[#dfd9ff] text-xs md:text-sm font-medium tracking-wider uppercase">
+            Available for Freelance: Apps & Websites
+          </p>
+        </motion.div>
+
         <h1 className="text-white font-black lg:text-[80px] sm:text-[60px] text-[45px] leading-tight">
           Hi, I'm <span className="gradient-text">{personalInfo.name}</span>
         </h1>
@@ -72,17 +88,7 @@ const Hero = () => {
           </a>
         </motion.div>
       </motion.div>
-
-      {/* 5. MOUSE SCROLL INDICATOR */}
-      <div className="absolute bottom-10 w-full flex justify-center items-center">
-        <div className="w-[30px] h-[50px] rounded-3xl border-2 border-secondary flex justify-center items-start p-2">
-          <motion.div
-            animate={{ y: [0, 16, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
-            className="w-2 h-2 rounded-full bg-secondary"
-          />
-        </div>
-      </div>
+   
     </section>
   );
 };
