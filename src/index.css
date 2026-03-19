@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #050816;
+  --secondary: #aaa6c3;
+  --tertiary: #151030;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary);
+  color: white;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(90deg, #915eff 0%, #ff5e91 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-tertiary {
+    background-color: var(--tertiary);
+  }
+}
+
+/* Smooth hide scrollbar for a cleaner 3D look */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #915eff;
+  border-radius: 10px;
+}
