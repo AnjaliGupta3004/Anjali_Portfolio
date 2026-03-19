@@ -1,7 +1,7 @@
 import qubcab1 from "../assets/qubcab1.png";
 import qubcab2 from "../assets/qubcab2.png";
-import grosp1 from "../assets/qubcab1.png";
-import grosp2 from "../assets/qubcab2.png";
+import grosp1 from "../assets/grosp1.png";
+import grosp2 from "../assets/grosp2.png";
 import warTrackerImg from "../assets/demo-preview.png";
 
 import { Github, Linkedin, Mail, Phone, Instagram } from "lucide-react"; // Install lucide-react
